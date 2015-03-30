@@ -115,7 +115,7 @@ namespace SurveyMonkey
                     pi.CanWrite && string.Equals(pi.Name, name, StringComparison.OrdinalIgnoreCase));
 
                 if (prop != null)
-                    prop.SetValue(instance, jp.Value.ToObject(prop.PropertyType, serializer));
+                    prop.SetValue(instance, jp.Value.ToObject(prop.PropertyType, serializer), null);
             }
 
             return instance;

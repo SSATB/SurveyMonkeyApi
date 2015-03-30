@@ -348,7 +348,7 @@ namespace SurveyMonkey
                 var propertyName = question.AnswersLookup[responseAnswer.Row].Type.ToString();
                 if (typeof(DemographicAnswer).GetProperty(propertyName, (BindingFlags.IgnoreCase | BindingFlags.Public | BindingFlags.Instance)) != null)
                 {
-                    typeof(DemographicAnswer).GetProperty(propertyName, (BindingFlags.IgnoreCase | BindingFlags.Public | BindingFlags.Instance)).SetValue(reply, responseAnswer.Text);
+                    typeof(DemographicAnswer).GetProperty(propertyName, (BindingFlags.IgnoreCase | BindingFlags.Public | BindingFlags.Instance)).SetValue(reply, responseAnswer.Text, null);
                 }
             }
             return reply;

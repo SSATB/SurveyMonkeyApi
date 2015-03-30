@@ -43,7 +43,7 @@ namespace SurveyMonkey
                 }
 
                 var properties = typeof (GetSurveyListSettingsOptionalData).GetProperties();
-                List<string> optionalProperties = (from property in properties where (bool) property.GetValue(OptionalData) select property.Name).ToList();
+                List<string> optionalProperties = (from property in properties where (bool) property.GetValue(OptionalData, null) select property.Name).ToList();
                 var snakeCaseProperties = new List<string>();
                 foreach (var optionalProperty in optionalProperties)
                 {
@@ -127,7 +127,7 @@ namespace SurveyMonkey
                 }
 
                 var properties = typeof(GetCollectorListSettingsOptionalData).GetProperties();
-                List<string> optionalProperties = (from property in properties where (bool)property.GetValue(OptionalData) select property.Name).ToList();
+                List<string> optionalProperties = (from property in properties where (bool)property.GetValue(OptionalData, null) select property.Name).ToList();
                 var snakeCaseProperties = new List<string>();
                 foreach (var optionalProperty in optionalProperties)
                 {
@@ -243,7 +243,7 @@ namespace SurveyMonkey
                 }
 
                 var properties = typeof(GetRespondentListSettingsOptionalData).GetProperties();
-                List<string> optionalProperties = (from property in properties where (bool)property.GetValue(OptionalData) select property.Name).ToList();
+                List<string> optionalProperties = (from property in properties where (bool)property.GetValue(OptionalData, null) select property.Name).ToList();
                 var snakeCaseProperties = new List<string>();
                 foreach (var optionalProperty in optionalProperties)
                 {
